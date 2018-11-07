@@ -31,3 +31,7 @@ Version number can be included in the query param. `?v=1.0`
 Version number can be included in the url as a path parameter.
 
 /api/{version-number}/resource
+
+#### Implementation in django-rest-framework
+
+Reference: https://www.django-rest-framework.org/api-guide/versioning/
