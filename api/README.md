@@ -35,3 +35,20 @@ Version number can be included in the url as a path parameter.
 #### Implementation in django-rest-framework
 
 Reference: https://www.django-rest-framework.org/api-guide/versioning/
+
+## Http methods and response status codes to use.
+
+|Method|Explanation|Status code success|Status code failure|
+|------|-----------|-------------------|-------------------|
+| `POST` | When a resource is to be created. | 201 - Created | 400 - Bad request |
+| `PUT` | When a resource needs complete update. | 200 - Ok | 400 - Bad request |
+| `PATCH` | When a resource needs partial update. | 200 - Ok | 400 - Bad request |
+| `DELETE` | When a resource needs to be deleted. (Use this for soft-delete's as well). | 204 - No content | 404 - Not found |
+
+**Status code**
+
+- 403 - Forbidden. (Use this when the user doesn't have access to the resource, even when the user is logged in.)
+- 401 - Unauthoried. (Use this when a logged out user tries to access a restricted resource)
+
+*~Note~*
+There is a lot of discussion over the meaning of 403 & 401. But we have chosen to use the above.
