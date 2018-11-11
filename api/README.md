@@ -1,10 +1,10 @@
-## Guidelines for api.
+# Guidelines for api.
 
-### Prefix all the api's
+## Prefix all the api's
 
 All the api's should be prefixed with `/api`
 
-### Versioning
+## Versioning
 
 There are 3 ways of implementing versioning
 
