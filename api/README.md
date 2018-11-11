@@ -50,5 +50,5 @@ Reference: https://www.django-rest-framework.org/api-guide/versioning/
 - 403 - Forbidden. (Use this when the user doesn't have access to the resource, even when the user is logged in.)
 - 401 - Unauthoried. (Use this when a logged out user tries to access a restricted resource)
 
-*~Note~*
+_**Note:**_
 There is a lot of discussion over the meaning of 403 & 401. But we have chosen to use the above.
