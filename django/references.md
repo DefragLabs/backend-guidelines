@@ -19,3 +19,6 @@ For authentication we use django-restauth and use JWT setup.
 
 https://github.com/Tivix/django-rest-auth
 
+## Web page capture
+
+https://github.com/makinacorpus/django-screamshot
