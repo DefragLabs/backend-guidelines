@@ -32,4 +32,4 @@ sudo usermod -aG docker $USER
 sudo apt-get install python-pip
 
 # Install docker-compose
-pip install docker-compose
+sudo pip install docker-compose
