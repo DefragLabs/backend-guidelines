@@ -22,3 +22,7 @@ https://github.com/Tivix/django-rest-auth
 ## Web page capture
 
 https://github.com/makinacorpus/django-screamshot
+
+## Feature flipping
+
+https://waffle.readthedocs.io/en/stable/index.html
