@@ -5,3 +5,10 @@ For models foreign keys use string format (`app.Model`) instead of actually impo
 the probability of circular imports.
 
 If the foreign key is in the same model file then mention the name of the model in string without app name (`Model`).
+
+**Example:**
+
+```
+class UserProfile(models.Model):
+    user = models.OneToOneField('User', on_delete=models.CASCADE, related_name="user_profile")
+```
