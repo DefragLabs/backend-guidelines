@@ -4,6 +4,10 @@
 
 All the api's should be prefixed with `/api`
 
+## Prefix all the auth related api's with auth
+
+`/api/auth`
+
 ## Versioning
 
 There are 3 ways of implementing versioning
