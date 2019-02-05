@@ -56,3 +56,26 @@ Reference: https://www.django-rest-framework.org/api-guide/versioning/
 
 _**Note:**_
 There is a lot of discussion over the meaning of 403 & 401. But we have chosen to use the above.
+
+#### Unique together validation in DRF.
+
+By default serializer doesn't handle unique together errors. We have to add a `UniqueTogetherValidator`.
+
+Example:
+
+```
+from rest_framework.validators import UniqueTogetherValidator
+
+class StudentSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Student
+        fields = '__all__'
+
+        validators = [
+            UniqueTogetherValidator(
+                queryset=Student.objects.all(),
+                fields=("name", "age")
+            )
+        ]
+```
