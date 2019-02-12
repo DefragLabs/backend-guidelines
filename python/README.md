@@ -15,3 +15,9 @@ If the parameters are integer use the below
 `bool(query_param1 is not None) ^ bool(query_param2 is not None)`
 
 because the default value for an integer is 0 (Which is false in bool).
+
+## String to boolean
+
+Convert a string representation of truth to true (1) or false (0)
+
+https://docs.python.org/3/distutils/apiref.html#distutils.util.strtobool
