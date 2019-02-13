@@ -24,3 +24,19 @@ Blog.objects.all().update(posts_count=F('posts_count') + 1)
 This will update the count of posts in a blog atomically. This increments happens in the database and not at the application
 level. If done at the app level, there might be issues with the count. Like 2 threads might read the post count as 1 and 
 update the count 2, whereas it should've been 3.
+
+
+## Merge querysets from same model
+
+To merge 2 or more querysets, we can use boolean or to merge them into one single queryset. This is better than converting 
+them to lists and extending them, since converting to lists makes database calls.
+
+```
+blog = Blog.objects.get(name='Django Blog')
+user = User.objects.get(username='vitor')
+
+django_stories = blog.stories.all()
+vitor_stories = user.stories.filter(category__name='django')
+
+stories = django_stories | vitor_stories  # merge querysets
+```
