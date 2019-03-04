@@ -29,7 +29,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 
 # Install python-pip
-sudo apt-get install python-pip
+sudo apt-get install -y python-pip
 
 # Install docker-compose
 sudo pip install docker-compose
