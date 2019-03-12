@@ -21,3 +21,12 @@ because the default value for an integer is 0 (Which is false in bool).
 Convert a string representation of truth to true (1) or false (0)
 
 https://docs.python.org/3/distutils/apiref.html#distutils.util.strtobool
+
+## Install a python package from github directly
+
+In `requirements.py` add this line instead of `django-rest-auth==0.9.3`
+
+```
+-e git+git://github.com/Tivix/django-rest-auth.git#egg=django-rest-auth
+```
+This will install from `master` branch.
