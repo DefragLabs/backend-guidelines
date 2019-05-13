@@ -40,3 +40,7 @@ vitor_stories = user.stories.filter(category__name='django')
 
 stories = django_stories | vitor_stories  # merge querysets
 ```
+
+## Django app naming
+
+The name of the django apps should be singular. For example `user`, `event`.
