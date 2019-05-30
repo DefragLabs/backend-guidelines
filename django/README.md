@@ -44,3 +44,8 @@ stories = django_stories | vitor_stories  # merge querysets
 ## Django app naming
 
 The name of the django apps should be singular. For example `user`, `event`.
+
+## Naming of django rest framework views
+
+- It should be singular
+- The naming convention should be like `UserProfileView`. Action in singular + the string `View`. 
