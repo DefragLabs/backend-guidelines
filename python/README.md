@@ -30,3 +30,45 @@ In `requirements.py` add this line instead of `django-rest-auth==0.9.3`
 -e git+git://github.com/Tivix/django-rest-auth.git#egg=django-rest-auth
 ```
 This will install from `master` branch.
+
+## Formatting import statements
+
+Import statements should be grouped into 3 levels.
+
+1. Built-in libraries
+2. Third party libraries (Include Django)
+3. Custom imports
+
+```
+import os
+import datetime
+
+from django.db import models
+
+from posts.view import PostListView
+```
+
+Also order the imports based on the line length.
+
+**wrong**
+```
+import datetime
+import os
+
+from django.db import models
+
+from utils.response import set_response
+from posts.view import PostListView
+```
+
+**correct**
+
+```
+import os
+import datetime
+
+from django.db import models
+
+from posts.view import PostListView
+from utils.response import set_response
+```
