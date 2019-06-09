@@ -49,3 +49,18 @@ The name of the django apps should be singular. For example `user`, `event`.
 
 - It should be singular
 - The naming convention should be like `UserProfileView`. Action in singular + the string `View`. 
+
+## Deafult value for DateTimeField
+
+Use `timezone.now` instead of `datetime.now` for the default value for a `DateTimeField`.
+
+```
+from django.utils import timezone
+
+
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    created_at = models.DateTimeField(default=timezone.now)
+```
+
+The above is just an example. `created_at` can have `auto_add_now` instead of an explicit default.
