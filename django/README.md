@@ -64,3 +64,15 @@ class Post(models.Model):
 ```
 
 The above is just an example. `created_at` can have `auto_add_now` instead of an explicit default.
+
+## For boolean model fields prefix the field with `is`.
+
+Examples: `is_published`, `is_active`
+
+```
+class Post(models.Model):
+    title = models.CharField(max_length=255)
+    created_at = models.DateTimeField(default=timezone.now)
+    
+    is_published = models.BooleanField(default=False)
+```
