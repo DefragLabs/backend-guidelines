@@ -76,3 +76,27 @@ class Post(models.Model):
     
     is_published = models.BooleanField(default=False)
 ```
+
+## OneToOne object does not exist.
+
+This exception can be caught using
+
+
+```
+from django.core.exceptions import ObjectDoesNotExist
+
+try:
+    p2.restaurant
+except ObjectDoesNotExist:
+    print("There is no restaurant here.")
+```
+
+Or use object specific exception
+
+```
+try:
+    p2.restaurant
+except Restaurant.DoesNotExist:
+    print("There is no restaurant here.")
+```
+
